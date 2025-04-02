@@ -1,6 +1,12 @@
-.container-fluid {
+@use "../abstracts/variables" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixins" as *;
+
+.hero-container {
   width: 100%;
+  aspect-ratio: 1.35/1;
   position: relative;
+
   h1 {
     width: 77%;
     text-align: right;
@@ -19,6 +25,115 @@
       position: relative;
       top: 5px;
       z-index: -1;
+    }
+  }
+}
+
+// Home content
+
+// Container et generals
+.container-fluid {
+  width: 100%;
+  @include dFlex (column, center, center, nowrap, 11rem);
+
+  h2, .text {
+    padding: 5rem 0;
+  }
+  .rating {
+    @include dFlex (row, flex-start, center, nowrap, 0.5rem);
+    padding: 1rem 0;
+  }
+  
+  .nb-avis::before {
+    content : "(325 avis)";
+  }
+
+  
+}
+
+
+// fire & earth hotel postion
+.fire-hotel, .earth-hotel {
+  aspect-ratio: 2/1;
+  width: 88%;
+  max-height: 800px;
+  @include dFlex (row, space-between, center, nowrap, 10rem);
+  align-self: flex-end;
+
+  .fire-hotel-content, .earth-hotel-content {
+    padding: 0 2.5rem;
+    width: 37%;
+  }
+
+  .hotel-pics {
+    @include dFlex (row, flex-start, center, nowrap, 2rem);
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+
+    .first-pic {
+      width: 70%;
+      height: 100%;
+      overflow: hidden;
+    
+      img {
+        object-position: -300px center;
+
+      }
+    }
+
+    .second-pic {
+      width: 30%;
+      height: 100%;
+      overflow: hidden;
+      padding-left: 2rem;
+
+
+      img {
+        object-position: -300px center;
+      }
+    }
+  }
+}
+
+// Air & water position
+
+.air-hotel, .water-hotel {
+  height: 800px;
+  width: 88%;
+  @include dFlex (row-reverse, space-between, center, nowrap, 10rem);
+  align-self: flex-start;
+
+  .air-hotel-content, .water-hotel-content {
+    padding: 0 2.5rem;
+    width: 37%;
+  }
+
+  .hotel-pics {
+    @include dFlex (row-reverse, flex-start, center, nowrap, 2rem);
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+
+    .first-pic {
+      width: 70%;
+      height: 100%;
+      overflow: hidden;
+    
+      img {
+        object-position: -300px center;
+        height: 100%;
+      }
+    }
+
+    .second-pic {
+      width: 30%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        object-position: -300px center;
+      }
     }
   }
 }

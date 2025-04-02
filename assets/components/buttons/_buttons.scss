@@ -19,3 +19,10 @@
   border-radius: 0.6rem;
   padding: 0.7rem 1.4rem;
 }
+
+.search-btn {
+  position: absolute;
+  left: 50%;
+  bottom: -10%; 
+  transform: translateX(-50%);
+}

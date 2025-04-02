@@ -134,9 +134,51 @@ header a {
   width: 30%;
 }
 
-.hero-form {
-  width: 51.5%;
+.form-container {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+.form-container h3 {
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+.form-container form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.form-container form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.form-container form label input, .form-container form label select {
+  color: #363A2B;
+  font-family: "Karla-regular", sans-serif;
+  font-size: 1.8rem;
+  padding: 0.8em;
   background-color: #E5E0DC;
+  border: none;
+  border-radius: 8px;
+}
+
+.hero-form {
+  width: 50%;
+  aspect-ratio: 3.5/1;
+  background-color: #D9c7b3;
+  border-radius: 18px;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
 }
 
 .primary-btn {
@@ -159,27 +201,149 @@ header a {
   padding: 0.7rem 1.4rem;
 }
 
-.container-fluid {
+.search-btn {
+  position: absolute;
+  left: 50%;
+  bottom: -10%;
+  transform: translateX(-50%);
+}
+
+.hero-container {
   width: 100%;
+  aspect-ratio: 1.35/1;
   position: relative;
 }
-.container-fluid h1 {
+.hero-container h1 {
   width: 77%;
   text-align: right;
   position: absolute;
   top: 50%;
   right: 4%;
 }
-.container-fluid .hero-video {
+.hero-container .hero-video {
   width: 100%;
   position: relative;
   background: linear-gradient(to left, rgba(54, 54, 54, 0.7568627451), transparent);
 }
-.container-fluid .hero-video video {
+.hero-container .hero-video video {
   width: 100%;
   position: relative;
   top: 5px;
   z-index: -1;
+}
+
+.container-fluid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 11rem;
+}
+.container-fluid h2, .container-fluid .text {
+  padding: 5rem 0;
+}
+.container-fluid .rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+.container-fluid .nb-avis::before {
+  content: "(325 avis)";
+}
+
+.fire-hotel, .earth-hotel {
+  aspect-ratio: 2/1;
+  width: 88%;
+  max-height: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10rem;
+  align-self: flex-end;
+}
+.fire-hotel .fire-hotel-content, .fire-hotel .earth-hotel-content, .earth-hotel .fire-hotel-content, .earth-hotel .earth-hotel-content {
+  padding: 0 2.5rem;
+  width: 37%;
+}
+.fire-hotel .hotel-pics, .earth-hotel .hotel-pics {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+}
+.fire-hotel .hotel-pics .first-pic, .earth-hotel .hotel-pics .first-pic {
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+}
+.fire-hotel .hotel-pics .first-pic img, .earth-hotel .hotel-pics .first-pic img {
+  object-position: -300px center;
+}
+.fire-hotel .hotel-pics .second-pic, .earth-hotel .hotel-pics .second-pic {
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 2rem;
+}
+.fire-hotel .hotel-pics .second-pic img, .earth-hotel .hotel-pics .second-pic img {
+  object-position: -300px center;
+}
+
+.air-hotel, .water-hotel {
+  height: 800px;
+  width: 88%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10rem;
+  align-self: flex-start;
+}
+.air-hotel .air-hotel-content, .air-hotel .water-hotel-content, .water-hotel .air-hotel-content, .water-hotel .water-hotel-content {
+  padding: 0 2.5rem;
+  width: 37%;
+}
+.air-hotel .hotel-pics, .water-hotel .hotel-pics {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+}
+.air-hotel .hotel-pics .first-pic, .water-hotel .hotel-pics .first-pic {
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+}
+.air-hotel .hotel-pics .first-pic img, .water-hotel .hotel-pics .first-pic img {
+  object-position: -300px center;
+  height: 100%;
+}
+.air-hotel .hotel-pics .second-pic, .water-hotel .hotel-pics .second-pic {
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+}
+.air-hotel .hotel-pics .second-pic img, .water-hotel .hotel-pics .second-pic img {
+  object-position: -300px center;
 }
 
 /*# sourceMappingURL=styles.css.map */

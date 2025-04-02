@@ -37,25 +37,142 @@
 
 				<!-- Main--------------------------------------- -->
 				<main>
-					<section id="hero" class="container-fluid">
+					<section id="hero" class="hero-container">
 						<div class="hero-video">
 							<video src="/assets/images/videos/home-video.mp4" autoplay loop></video>
 						</div>
 						<h1>Lorem ipsum dolor sit amet consectetur.</h1>
-						<div class="hero-form">
-							<form action="">
-								<label for="hotelChoice">Choisir un hôtel
-									<input type="select" name="hotelChoice" id="hotelChoice" placeholder="Choisir un hôtel" class="hotelChoice" required>
-								</label>
-								<label for="personNbr">Nbr de personnes
-									<input type="number" name="personNbr" id="personNbr" placeholder="Nombre de personnes" class="personNbr" required>
-								</label>
-								<label for="arrivalDate">Choisir une date d'arrivée
-									<input type="date" name="arrivalDate" id="arrivalDate" placeholder="Date d'arrivée" class="arrivalDate" required>
-								</label>
-							</form>
+						<div class="hero-form" id="heroForm">
+							<div class="form-container">
+								<h3>Rechercher une disponibilité</h3>
+								<form action="">
+									<label for="hotelChoice">Choisir un hôtel
+										<select name="hotels" id="hotelChoice"  class="hotel-choice" required>
+											<option value="">Choisir un hôtel</option>
+											<option value="fire-hotel">Hôtel Feu</option>
+											<option value="air-hotel">Hôtel Air</option>
+											<option value="earth-hotel">Hôtel Terre</option>
+											<option value="water-hotel">Hôtel Eau</option>
+										</select>
+									</label>
+									<label for="personNbr">Nbr de personnes 
+										<input type="number" name="personNbr" id="personNbr" class="person-nbr" required>
+									</label>
+									<label for="arrivalDate">Choisir une date d'arrivée
+										<input type="date" name="arrivalDate" id="arrivalDate" class="arrival-date" required>
+									</label>
+									<button action="submit" class="search-btn primary-btn">Chercher</button>
+								</form>
+							</div>
 						</div>
-						
+					</section>
+
+					<!-- Home content -->
+					<section id="homeContent" class="container-fluid">
+
+						<!-- Hotel feu -->
+						<div class="fire-hotel">
+							<div class="fire-hotel-content">
+								<h2>Hôtel Feu</h2>
+								<p class="country"><img src="assets/images/icons/map-pin.svg" alt="">Finlande</p>
+								<div class="rating">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-empty.svg" alt="">
+									<p class="nb-avis"></p>
+								</div>
+								<div class="text">L'hôtel Feu ne se situe bien sûr pas sur un volcan, mais en Finlande. 
+									Feu de laterre volcanique crachant non loin de là ses geysers, feu des volcans à l'horizon et, bien entendu, feu des aurores boréales que vous pourrez admirer tous les soirs par le toit vitré de votre chambre.</div>
+								<a href="#heroForm"><button class="primary-btn">Reserver</button></a>
+							</div>
+							<div class="hotel-pics row-d">
+								<div class="first-pic">
+									<img src="assets/images/pictures/fire-hotel/fire-pic-1.jpg" alt="Vue aérienne de logements en forme d’igloos en bois, enneigés en bordure de forêt sous un ciel nocturne.">
+								</div>
+								<div class="second-pic"><img src="assets/images/pictures/fire-hotel/fire-pic-2.jpg" alt="Chalet enneigé sous une spectaculaire aurore boréale verte.">
+								</div>
+							</div>
+						</div>
+
+						<!-- Hotel air -->
+						<div class="air-hotel">
+							<div class="air-hotel-content">
+								<h2>Hôtel Air</h2>
+								<p class="country"><img src="assets/images/icons/map-pin.svg" alt="">Brésil</p>
+								<div class="rating">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-empty.svg" alt="">
+									<p class="nb-avis"></p>
+								</div>
+								<div class="text">L'hôtel Air se situe à la frontière du Brésil et du Pérou. 
+									C'est un concept architectural innovant qui a permis une implantation à la cîme de la forêt pour offrir un panorama vertigineux et cotoyerchaque matin, de votre chambre (avec ou sans piscine), les oiseaux à votre réveil.</div>
+								<a href="#heroForm"><button class="primary-btn">Reserver</button></a>
+							</div>
+							<div class="hotel-pics row-reverse">
+								<div class="first-pic">
+									<img src="assets/images/pictures/air-hotel/air-pic-1.jpg" alt="Maison ronde surmontée d’un dôme d’observatoire, nichée dans la cime des arbres, vue à travers le feuillage.">
+								</div>
+								<div class="second-pic">
+									<img src="assets/images/pictures/air-hotel/air-pic-2.jpg" alt="Perspective en première personne d’un voyageur traversant un pont de singe suspendu dans la canopée.">
+								</div>			
+							</div>
+						</div>
+
+						<!-- Hotel terre -->
+						<div class="earth-hotel">
+							<div class="earth-hotel-content">
+								<h2>Hôtel Terre</h2>
+								<p class="country"><img src="assets/images/icons/map-pin.svg" alt="">Thaïlande</p>
+								<div class="rating">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-empty.svg" alt="">
+									<p class="nb-avis"></p>
+								</div>
+								<div class="text">L'hôtel Terre est situé dans des grottes naturelles en Thaïlande. Retaillées et aménagées avec beaucoup de soin, les chambres de l'hôtel vous offriront soit la fraîcheur et l'apaisement à près de vingt mètres de profondeur, soit un hâvre de paix ouvrant sur l'horizon de la mer au loin.</div>
+								<a href="#heroForm"><button class="primary-btn">Reserver</button></a>
+							</div>
+							<div class="hotel-pics row-d">
+								<div class="first-pic">
+									<img src="assets/images/pictures/earth-hotel/earth-pic-1.jpg" alt="Chambre troglodyte creusée dans une grotte, avec lits recouverts de peaux de bêtes et éclairage doux par lampes à sel.">
+								</div>
+								<div class="second-pic">
+									<img src="assets/images/pictures/earth-hotel/earth-pic-2.jpg" alt="Restaurant rustique avec tables et chaises en pierre, installé dans une grotte offrant une vue panoramique sur l’extérieur.">
+								</div>
+							</div>
+						</div>
+
+						<!-- Hotel eau -->
+						<div class="water-hotel">
+							<div class="water-hotel-content">
+								<h2>Hôtel Eau</h2>
+								<p class="country"><img src="assets/images/icons/map-pin.svg" alt="">Île du pacifique</p>
+								<div class="rating">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-full.svg" alt="">
+									<img src="assets/images/icons/star-empty.svg" alt="">
+									<p class="nb-avis"></p>
+								</div>
+								<div class="text">L'hôtel Eau est situé sur une île de 2 kilomètres carrés très exactement équidistante de Vladivostok et de Los Angeles. C'est le milieu duPacifique. Vous y disposerez de votre plage, de votre bateau et de votre majordome privés. Votre chambre est un caisson immergé à deux mètres sous l'eau.</div>
+								<a href="#heroForm"><button class="primary-btn">Reserver</button></a>
+							</div>
+							<div class="hotel-pics row-reverse">
+								<div class="first-pic">
+									<img src="assets/images/pictures/water-hotel/water-hotel-1.jpg" alt="Vue sous-marine d’un logement sous l’océan, avec une plongeuse et un poisson-lune nageant devant une baie vitrée.">
+								</div>
+								<div class="second-pic">
+									<img src="assets/images/pictures/water-hotel/water-hotel-2.jpg" alt="Intérieur d’une chambre sous-marine avec une large baie vitrée donnant sur les profondeurs océaniques.">
+								</div>
+						</div>
 					</section>
 				</main>
 
