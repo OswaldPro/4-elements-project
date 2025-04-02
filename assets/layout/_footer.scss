@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixins" as *;
+
+footer {
+  background-color: #fff;
+}
+
+.footer-container {
+  width: 92%;
+  margin: auto;
+  padding : 4.5rem 0;
+  @include dFlex (row, space-between, center, nowrap, 0);
+
+  > div {
+    width: 22%;
+    @include dFlex (column, space-between, flex-start,nowrap, 2rem);
+  }
+
+  .logo-footer {
+    width: 70%;
+    object-fit: cover;
+  }
+}

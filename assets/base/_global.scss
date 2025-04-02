@@ -21,8 +21,13 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  scroll-behavior: smooth;
 }
 
 li {
   list-style: none;
+}
+
+.d-none {
+  display: none;
 }

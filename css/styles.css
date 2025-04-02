@@ -58,12 +58,33 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  scroll-behavior: smooth;
 }
 
 li {
   list-style: none;
 }
 
+.d-none {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  header {
+    background-color: transparent;
+    opacity: 1;
+  }
+  header .header-mobile {
+    width: 76.6%;
+    margin: auto;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  header .header-container {
+    display: none;
+  }
+}
 header {
   position: fixed;
   z-index: 10;
@@ -132,6 +153,51 @@ header a {
   flex-wrap: nowrap;
   gap: 2rem;
   width: 30%;
+}
+
+@media (max-width: 880px) {
+  header {
+    background-color: transparent;
+    opacity: 1;
+  }
+  header .header-mobile {
+    width: 76.6%;
+    margin: auto;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  header .header-container {
+    display: none;
+  }
+}
+footer {
+  background-color: #fff;
+}
+
+.footer-container {
+  width: 92%;
+  margin: auto;
+  padding: 4.5rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.footer-container > div {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+.footer-container .logo-footer {
+  width: 70%;
+  object-fit: cover;
 }
 
 .form-container {
@@ -208,16 +274,20 @@ header a {
   transform: translateX(-50%);
 }
 
+body {
+  background-color: #E5E0DC;
+}
+
 .hero-container {
-  width: 100%;
+  width: 100vw;
   aspect-ratio: 1.35/1;
   position: relative;
 }
 .hero-container h1 {
-  width: 77%;
+  width: 77vw;
   text-align: right;
   position: absolute;
-  top: 50%;
+  top: 35%;
   right: 4%;
 }
 .hero-container .hero-video {
@@ -271,7 +341,7 @@ header a {
 }
 .fire-hotel .fire-hotel-content, .fire-hotel .earth-hotel-content, .earth-hotel .fire-hotel-content, .earth-hotel .earth-hotel-content {
   padding: 0 2.5rem;
-  width: 37%;
+  width: 50%;
 }
 .fire-hotel .hotel-pics, .earth-hotel .hotel-pics {
   display: flex;
@@ -315,7 +385,7 @@ header a {
 }
 .air-hotel .air-hotel-content, .air-hotel .water-hotel-content, .water-hotel .air-hotel-content, .water-hotel .water-hotel-content {
   padding: 0 2.5rem;
-  width: 37%;
+  width: 40%;
 }
 .air-hotel .hotel-pics, .water-hotel .hotel-pics {
   display: flex;
@@ -344,6 +414,69 @@ header a {
 }
 .air-hotel .hotel-pics .second-pic img, .water-hotel .hotel-pics .second-pic img {
   object-position: -300px center;
+}
+
+.container {
+  width: 73%;
+  margin: auto;
+}
+.container .concept-arch {
+  padding: 16rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.container .concept-arch .concept {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 3.5rem;
+}
+.container .concept-arch .architectural {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 3.5rem;
+}
+.container .concept-arch img {
+  width: 100%;
+}
+.container .creator {
+  padding-bottom: 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.container .creator .creator-words {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 3.5rem;
+}
+.container .creator .creator-photo {
+  max-width: 40%;
+}
+.container .creator .creator-photo img {
+  width: 100%;
+  aspect-ratio: 1/1.3;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */
