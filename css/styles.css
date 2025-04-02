@@ -1,0 +1,185 @@
+h1, h2, h3, h4, h5, p, .legend {
+  color: #363A2B;
+}
+
+h1 {
+  font-family: "PlayFD-medium", serif;
+  font-size: 10rem;
+  color: #D9c7b3;
+}
+
+h2 {
+  font-family: "PlayFD-medium", serif;
+  font-size: 9.6rem;
+}
+
+h3 {
+  font-family: "PlayFD-bold", serif;
+  font-size: 4.8rem;
+}
+
+h4 {
+  font-family: "PlayFD-bold", serif;
+  font-size: 3rem;
+}
+
+h5 {
+  font-family: "Karla-bold", sans-serif;
+  font-size: 2rem;
+}
+
+p {
+  font-family: "Karla-regular", sans-serif;
+  font-size: 2rem;
+}
+
+p .legend {
+  font-family: "Karla-regular", sans-serif;
+  font-size: 1.5rem;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Karla-regular", sans-serif;
+  font-size: 2rem;
+  color: #363A2B;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: #E5E0DC;
+  opacity: 0.9;
+}
+header a {
+  font-family: "Karla-regular", sans-serif;
+  font-size: 2rem;
+  color: #363A2B;
+}
+
+.header-container {
+  width: 90%;
+  margin: auto;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.nav-left {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.nav-left .logo-home {
+  width: 23.5%;
+  margin-right: 2rem;
+}
+.nav-left .logo-home .header-logo {
+  width: 100%;
+}
+.nav-left ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  width: 50%;
+}
+
+.nav-right {
+  width: 49%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}
+.nav-right .contact-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  width: 30%;
+}
+
+.hero-form {
+  width: 51.5%;
+  background-color: #E5E0DC;
+}
+
+.primary-btn {
+  font-family: "Karla-regular", sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  background-color: #363A2B;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.7rem 3rem;
+}
+
+.secondary-btn {
+  font-family: "Karla-regular", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #4f6234;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.7rem 1.4rem;
+}
+
+.container-fluid {
+  width: 100%;
+  position: relative;
+}
+.container-fluid h1 {
+  width: 77%;
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  right: 4%;
+}
+.container-fluid .hero-video {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to left, rgba(54, 54, 54, 0.7568627451), transparent);
+}
+.container-fluid .hero-video video {
+  width: 100%;
+  position: relative;
+  top: 5px;
+  z-index: -1;
+}
+
+/*# sourceMappingURL=styles.css.map */

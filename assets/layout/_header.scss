@@ -1,0 +1,65 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: $background-color;
+  opacity: 0.9;
+
+  a {
+    font-family: 'Karla-regular', sans-serif;
+    font-size: 2rem;
+    color: $primary-color;
+  }
+}
+
+.header-container {
+  width: 90%;
+  margin: auto;
+  padding: 0.5rem 0;
+  @include dFlex (row, space-between, center, nowrap, 0);
+}
+
+// Nav gauche
+.nav-left {
+  width: 50%;
+  @include dFlex (row, flex-start, center, nowrap, 0);
+
+  .logo-home {
+    width: 23.5%;
+    margin-right: 2rem;
+
+    .header-logo {
+      width: 100%;
+    }
+  } 
+
+  ul {
+    @include dFlex (row, space-evenly, center, nowrap, 0);
+    width: 50%;
+  }
+}
+
+
+// nav droite
+.nav-right {
+  width: 49%;
+  @include dFlex (row, flex-end, center, nowrap, 3rem);
+
+  .contact-socials {
+    @include dFlex (row, flex-start, center, nowrap, 2rem);
+    width: 30%;
+  }
+}
+
+
+
+
+
+
+
+
+
+

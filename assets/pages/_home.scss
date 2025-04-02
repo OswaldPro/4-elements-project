@@ -1,0 +1,24 @@
+.container-fluid {
+  width: 100%;
+  position: relative;
+  h1 {
+    width: 77%;
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    right: 4%;
+  }
+
+  .hero-video{
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to left, #363636c1, transparent);
+    
+    video {
+      width: 100%;
+      position: relative;
+      top: 5px;
+      z-index: -1;
+    }
+  }
+}

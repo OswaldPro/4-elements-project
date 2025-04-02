@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/typography" as *;
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: $primary-font-size;
+  color: $primary-color;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
