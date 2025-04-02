@@ -38,6 +38,21 @@ p .legend {
   font-size: 1.5rem;
 }
 
+@media (max-width: 880px) {
+  h1 {
+    font-size: 5rem;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 6.4rem;
+  }
+  h3 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1.7rem;
+  }
+}
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -222,7 +237,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: flex-start;
   flex-wrap: nowrap;
   gap: 1rem;
 }
@@ -247,6 +262,37 @@ footer {
   transform: translate(-50%, -10%);
 }
 
+@media (max-width: 880px) {
+  .hero-form {
+    bottom: -20%;
+  }
+  .hero-form .form-container {
+    width: 73%;
+    height: 325px;
+  }
+  .hero-form .form-container h3 {
+    font-size: 1.7rem;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  .hero-form .form-container form {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .hero-form .form-container form label {
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-form .form-container form label input, .hero-form .form-container form label select {
+    width: 225px;
+    font-size: 1.5rem;
+  }
+  .hero-form .form-container form .search-btn {
+    font-size: 2rem;
+    bottom: -5%;
+  }
+}
 .primary-btn {
   font-family: "Karla-regular", sans-serif;
   font-size: 3rem;
@@ -284,7 +330,7 @@ body {
   position: relative;
 }
 .hero-container h1 {
-  width: 77vw;
+  width: 77%;
   text-align: right;
   position: absolute;
   top: 35%;
@@ -430,19 +476,10 @@ body {
   flex-wrap: nowrap;
   gap: 0;
 }
-.container .concept-arch .concept {
+.container .concept-arch .concept, .container .concept-arch .architectural {
   max-width: 40%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  gap: 3.5rem;
-}
-.container .concept-arch .architectural {
-  max-width: 40%;
-  display: flex;
-  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
@@ -477,6 +514,54 @@ body {
   width: 100%;
   aspect-ratio: 1/1.3;
   object-fit: cover;
+}
+
+@media (max-width: 880px) {
+  .hero-container h1 {
+    text-align: center;
+    top: 25%;
+    left: 10%;
+    transform: translate(-50% -50%);
+  }
+  .hero-container video {
+    height: 700px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 880px) {
+  .container-fluid {
+    gap: 2rem;
+  }
+  .container-fluid > div {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+}
+@media (max-width: 880px) {
+  .container .concept-arch {
+    flex-direction: column;
+  }
+  .container .concept-arch .concept, .container .concept-arch .architectural {
+    max-width: none;
+    width: 100%;
+    margin: 3rem auto;
+  }
+  .container .creator {
+    flex-direction: column-reverse;
+  }
+  .container .creator .creator-words, .container .creator .creator-photo {
+    max-width: none;
+    width: 100%;
+    margin: 3rem auto;
+  }
+  .container .creator .h3-desktop {
+    display: none;
+  }
+  .container .creator .h3-mobile {
+    display: block;
+    margin-bottom: 2rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

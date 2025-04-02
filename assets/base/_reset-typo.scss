@@ -40,3 +40,22 @@ p .legend {
   font-size: 1.5rem;
 }
 
+@media (max-width:880px){
+  h1 {
+    font-size: 5rem;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: 6.4rem;
+  }
+
+  h3 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.7rem;
+  }
+}
+

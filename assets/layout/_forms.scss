@@ -16,7 +16,7 @@
     @include dFlex (row, flex-start, center, nowrap, 1rem);
 
     label {
-      @include dFlex (column, center, left, nowrap, 1rem);
+      @include dFlex (column, center, flex-start, nowrap, 1rem);
 
       input, select {
         color : $primary-color;
@@ -42,3 +42,40 @@
   transform: translate(-50%, -10%);
 }
 
+@media (max-width: 880px){
+  .hero-form {
+    bottom: -20%;
+
+    .form-container {
+      width: 73%;
+      height: 325px;
+
+      h3 {
+        font-size: 1.7rem;
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+      }
+
+      form {
+        flex-direction: column !important;
+        align-items: center;
+
+        label {
+          justify-content: center;
+          align-items: center;
+
+          input, select {
+            width: 225px;
+            font-size: 1.5rem;
+          }
+        }
+
+        .search-btn {
+          font-size: 2rem;
+          bottom: -5%
+        }
+      }
+    }
+  }
+}
