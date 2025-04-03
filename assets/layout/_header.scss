@@ -2,25 +2,6 @@
 @use '../abstracts/mixins' as *;
 
 
-@media (max-width:880px){
-header { 
-  background-color: transparent;
-  opacity: 1;
-
-    .header-mobile {
-      width: 76.6%;
-      margin: auto;
-      padding-top: 5rem;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .header-container{
-      display: none;
-    }
-  }
-}
-
 
 header {
   position: fixed;
@@ -73,6 +54,11 @@ header {
     @include dFlex (row, flex-start, center, nowrap, 2rem);
     width: 30%;
   }
+}
+
+.active-link {
+  font-weight: bold;
+  border-bottom: 3px solid $primary-color;
 }
 
 @media (max-width:880px){

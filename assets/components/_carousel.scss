@@ -1,0 +1,109 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.carousel {
+  position: relative;
+  width: 86.7%;
+  margin-left: calc(100% - 86.7%);
+  @include dFlex (row, flex-start, center, nowrap, 9rem);
+  overflow: hidden;
+   
+   
+  .item {
+    @include dFlex (column, flex-end, flex-end, nowrap, 0);
+    width: 37%;
+    min-width: 37%;
+    aspect-ratio: 1.5/1;
+
+    h4, p {
+      width: 60%;
+      color : white;
+      padding: 0 2rem 2rem 0;
+      text-align: right;
+    }
+
+    button {
+      margin: 0 2rem 2rem 0;
+    }
+  }
+}
+
+.chauffeur {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/services/services-chauffeur.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.breakfast {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/services/services-breakfast.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.diner {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/services/services-food.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.guide {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/services/services-guide.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// Activités 
+
+.snow-dog {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/activities/chien-traineaux.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hiking {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/activities/rando-raquette.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.volcano {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/activities/volcan.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.caves {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/activities/speleologie.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.car-btns {
+  @include dFlex (row, space-between, center, nowrap, 0);
+  width: 100%;
+  position: absolute;
+  top : 50%;
+
+  .next {
+    padding: 1rem;
+    border: none;
+    background-color: #ffffff7b;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .prev {
+    padding: 1rem;
+    border: none;
+    background-color: #ffffff7b;
+    border-radius: 0 1rem 1rem 0;
+  }
+}

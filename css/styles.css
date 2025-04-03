@@ -84,22 +84,6 @@ li {
   display: none;
 }
 
-@media (max-width: 880px) {
-  header {
-    background-color: transparent;
-    opacity: 1;
-  }
-  header .header-mobile {
-    width: 76.6%;
-    margin: auto;
-    padding-top: 5rem;
-    display: flex;
-    justify-content: space-between;
-  }
-  header .header-container {
-    display: none;
-  }
-}
 header {
   position: fixed;
   z-index: 10;
@@ -170,6 +154,11 @@ header a {
   width: 30%;
 }
 
+.active-link {
+  font-weight: bold;
+  border-bottom: 3px solid #363A2B;
+}
+
 @media (max-width: 880px) {
   header {
     background-color: transparent;
@@ -213,6 +202,106 @@ footer {
 .footer-container .logo-footer {
   width: 70%;
   object-fit: cover;
+}
+
+.grid-details {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 24px 11px;
+  grid-auto-flow: row;
+  justify-items: flex-start;
+  grid-template-areas: "spa pool" "parking gym" "clim bus";
+}
+
+.spa {
+  grid-area: spa;
+}
+
+.parking {
+  grid-area: parking;
+}
+
+.clim {
+  grid-area: clim;
+}
+
+.pool {
+  grid-area: pool;
+}
+
+.gym {
+  grid-area: gym;
+}
+
+.bus {
+  grid-area: bus;
+}
+
+.grid-info {
+  width: 73%;
+  margin: 6rem auto;
+  display: grid;
+  grid-template-columns: 0.8fr 0.7fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 24px 20px;
+  grid-auto-flow: row;
+  justify-content: space-between;
+  align-content: space-between;
+  justify-items: start;
+  align-items: center;
+  grid-template-areas: "arrival departure accessibility" "annulation-conditions annulation-conditions pets" "age-restrictions age-restrictions paiement";
+}
+
+.grid-info > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2.2rem;
+}
+.grid-info span {
+  font-weight: bold;
+}
+
+.annulation-conditions {
+  grid-area: annulation-conditions;
+  width: 70%;
+}
+
+.arrival {
+  grid-area: arrival;
+}
+
+.departure {
+  grid-area: departure;
+}
+
+.age-restrictions {
+  grid-area: age-restrictions;
+  width: 70%;
+}
+
+.accessibility {
+  grid-area: accessibility;
+  padding-left: 10rem;
+  width: 90%;
+}
+
+.pets {
+  grid-area: pets;
+  padding-left: 10rem;
+  width: 90%;
+}
+
+.paiement {
+  grid-area: paiement;
+  padding-left: 10rem;
+  width: 90%;
 }
 
 .form-container {
@@ -318,6 +407,119 @@ footer {
   left: 50%;
   bottom: -10%;
   transform: translateX(-50%);
+}
+
+.carousel {
+  position: relative;
+  width: 86.7%;
+  margin-left: 13.3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 9rem;
+  overflow: hidden;
+}
+.carousel .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  gap: 0;
+  width: 37%;
+  min-width: 37%;
+  aspect-ratio: 1.5/1;
+}
+.carousel .item h4, .carousel .item p {
+  width: 60%;
+  color: white;
+  padding: 0 2rem 2rem 0;
+  text-align: right;
+}
+.carousel .item button {
+  margin: 0 2rem 2rem 0;
+}
+
+.chauffeur {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/services/services-chauffeur.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.breakfast {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/services/services-breakfast.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.diner {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/services/services-food.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.guide {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/services/services-guide.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.snow-dog {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/activities/chien-traineaux.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hiking {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/activities/rando-raquette.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.volcano {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/activities/volcan.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.caves {
+  background-image: linear-gradient(to left, #515151, transparent), url(../../assets/images/pictures/activities/speleologie.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.car-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+.car-btns .next {
+  padding: 1rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4823529412);
+  border-radius: 1rem 0 0 1rem;
+}
+.car-btns .prev {
+  padding: 1rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4823529412);
+  border-radius: 0 1rem 1rem 0;
 }
 
 body {
@@ -562,6 +764,105 @@ body {
     display: block;
     margin-bottom: 2rem;
   }
+}
+.fire-page {
+  padding-top: 12rem;
+}
+
+.offers {
+  width: 100vw;
+}
+.offers h3 {
+  margin: 6rem 0;
+}
+.offers .offers-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.offers .offers-content > div {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 3.5rem;
+}
+.offers .offers-content > div > img {
+  width: 100%;
+  aspect-ratio: 1.8/1;
+  object-fit: cover;
+  margin-bottom: 8rem;
+}
+.offers .offers-content .suite {
+  gap: 4rem;
+}
+
+.services, .activities {
+  width: 100vw;
+  padding: 8rem 0 2rem 0;
+}
+.services > h4, .services > p, .activities > h4, .activities > p {
+  width: 73%;
+  margin: 1.5rem auto;
+}
+
+.testimonial {
+  width: 100vw;
+  padding: 8rem 0;
+}
+.testimonial video {
+  width: 100%;
+  padding: 8rem 0;
+}
+.testimonial h4 {
+  width: 73%;
+  margin: 2rem auto;
+}
+.testimonial .testi-content {
+  width: 73%;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.testimonial .testi-content .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  width: 40%;
+}
+.testimonial .testi-content .content .name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.name > img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.info h3, .info h4, .info > p {
+  width: 73%;
+  margin: 2rem auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

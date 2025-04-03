@@ -1,0 +1,96 @@
+//details grid
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.grid-details {  
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 24px 11px;
+  grid-auto-flow: row;
+  justify-items: flex-start;
+  grid-template-areas:
+    "spa pool"
+    "parking gym"
+    "clim bus";
+}
+
+.spa { grid-area: spa; }
+
+.parking { grid-area: parking; }
+
+.clim { grid-area: clim; }
+
+.pool { grid-area: pool; }
+
+.gym { grid-area: gym; }
+
+.bus { grid-area: bus; }
+
+
+// Info grid 
+
+.grid-info {  
+  width: 73%;
+  margin: 6rem auto;
+  display: grid;
+  grid-template-columns: 0.8fr 0.7fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 24px 20px;
+  grid-auto-flow: row;
+  justify-content: space-between;
+  align-content: space-between;
+  justify-items: start;
+  align-items: center;
+  grid-template-areas:
+    "arrival departure accessibility"
+    "annulation-conditions annulation-conditions pets"
+    "age-restrictions age-restrictions paiement";
+}
+
+.grid-info {
+  > div {
+    @include dFlex (row, flex-start, center, nowrap, 2.2rem);
+  }  
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.annulation-conditions { 
+  grid-area: annulation-conditions;
+  width: 70%;
+ }
+
+.arrival { grid-area: arrival; }
+
+.departure { grid-area: departure; }
+
+.age-restrictions { 
+  grid-area: age-restrictions;
+  width: 70%; 
+}
+
+.accessibility { 
+  grid-area: accessibility; 
+  padding-left: 10rem;
+  width: 90%;
+}
+
+.pets { 
+  grid-area: pets; 
+  padding-left: 10rem;
+  width: 90%;
+}
+
+.paiement { 
+  grid-area: paiement; 
+  padding-left: 10rem;
+  width: 90%;
+}
+

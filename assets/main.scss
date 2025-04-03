@@ -20,10 +20,11 @@
 @use "components/buttons/buttons.scss"as *;
 @use "components/cards/product-card"as *;
 @use "components/modals/modal"as *;
+@use "components/carousel"as *;
 
 // 5️⃣ Import des pages spécifiques
 @use "pages/home" as *;
-@use "pages/about"as *;
+@use "pages/fire"as *;
 @use "pages/contact"as *;
 
 // 6️⃣ Import des thèmes

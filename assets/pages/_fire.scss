@@ -1,0 +1,95 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.fire-page {
+  padding-top: 12rem;
+}
+
+.offers {
+  width: 100vw;
+
+  h3 {
+    margin : 6rem 0;
+  }
+
+  .offers-content {
+    width:100%;
+    @include dFlex (row, space-between, center, nowrap, 0);
+
+    > div {
+      width : 40%;
+      height: 100%;
+      @include dFlex (column, space-between, flex-start, nowrap, 3.5rem);
+
+      > img {
+        width: 100%;
+        aspect-ratio: 1.8/1;
+        object-fit: cover;
+        margin-bottom: 8rem;
+      }
+    }
+    .suite {
+      gap: 4rem;
+    }
+  }
+}
+
+// Services & activités 
+
+.services, .activities {
+  width: 100vw;
+  padding: 8rem 0 2rem 0;
+
+  > h4, > p {
+    width: 73%;
+    margin: 1.5rem auto;
+  }
+}
+
+// Video et testimonials
+
+.testimonial {
+  width: 100vw;
+  padding: 8rem 0;
+   
+  video {
+    width: 100%;
+    padding: 8rem 0;;
+  }
+
+  h4 {
+    width: 73%;
+    margin: 2rem auto;
+  }
+
+  .testi-content {
+    width: 73%;
+    margin: 4rem auto;
+  @include dFlex (row, space-between, flex-start, nowrap, 0);
+
+    .content { 
+      @include dFlex (column, space-between, flex-start, nowrap, 2rem);
+      width: 40%;
+
+      .name {
+        @include dFlex (row, space-between, flex-start, nowrap, 0);
+      }
+    }
+  }
+}
+
+.name > img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+// informations 
+
+.info {
+  h3, h4, > p {
+  width:73%;
+  margin: 2rem auto;
+  }
+}
