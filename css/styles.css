@@ -213,31 +213,48 @@ footer {
   gap: 24px 11px;
   grid-auto-flow: row;
   justify-items: flex-start;
+  align-items: center;
   grid-template-areas: "spa pool" "parking gym" "clim bus";
+}
+.grid-details img {
+  object-fit: cover;
+  margin-right: 2rem;
 }
 
 .spa {
   grid-area: spa;
+  display: flex;
+  align-items: center;
 }
 
 .parking {
   grid-area: parking;
+  display: flex;
+  align-items: center;
 }
 
 .clim {
   grid-area: clim;
+  display: flex;
+  align-items: center;
 }
 
 .pool {
   grid-area: pool;
+  display: flex;
+  align-items: center;
 }
 
 .gym {
   grid-area: gym;
+  display: flex;
+  align-items: center;
 }
 
 .bus {
   grid-area: bus;
+  display: flex;
+  align-items: center;
 }
 
 .grid-info {
@@ -390,6 +407,12 @@ footer {
   border: none;
   border-radius: 0.6rem;
   padding: 0.7rem 3rem;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  filter: brightness(1.8);
+  transition: 0.5s;
 }
 
 .secondary-btn {
@@ -400,6 +423,12 @@ footer {
   border: none;
   border-radius: 0.6rem;
   padding: 0.7rem 1.4rem;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  filter: brightness(1.8);
+  transition: 0.5s;
 }
 
 .search-btn {
@@ -407,6 +436,109 @@ footer {
   left: 50%;
   bottom: -10%;
   transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  filter: brightness(1.8);
+  transition: 0.5s;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal .modal-content {
+  position: relative;
+  background: #E5E0DC;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 50%;
+  font-family: "Karla-regular", sans-serif;
+  color: #363A2B;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+form fieldset {
+  border: 1px solid #D9c7b3;
+  padding: 1rem;
+  border-radius: 5px;
+}
+form fieldset legend {
+  font-family: "PlayFD-medium", serif;
+  font-size: 2rem;
+  color: #4f6234;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+form .name-group {
+  display: flex;
+  gap: 1rem;
+}
+form .name-group label {
+  flex: 1;
+}
+form input, form select {
+  padding: 0.5rem;
+  border: 1px solid #363A2B;
+  background: #E1D2C2;
+  font-size: 1rem;
+}
+form .radio-group, form .checkbox-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+form .radio-group label, form .checkbox-group label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border: 1px solid #363A2B;
+  border-radius: 5px;
+  background: #D9c7b3;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+form .radio-group label input, form .checkbox-group label input {
+  display: none;
+}
+form button {
+  width: 20%;
+  background: #4f6234;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+form button:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+form .close-modal {
+  position: absolute;
+  width: 80px;
+  right: 20px;
+  bottom: 20px;
 }
 
 .carousel {
@@ -802,6 +934,9 @@ body {
 }
 .offers .offers-content .suite {
   gap: 4rem;
+}
+.offers .offers-content p span {
+  font-weight: bold;
 }
 
 .services, .activities {

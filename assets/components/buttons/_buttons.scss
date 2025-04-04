@@ -8,6 +8,11 @@
   border: none;
   border-radius: 0.6rem;
   padding: 0.7rem 3rem;
+  cursor: pointer;
+}
+.primary-btn:hover {
+  filter: brightness(1.8);
+  transition: 0.5s;
 }
 
 .secondary-btn {
@@ -18,11 +23,24 @@
   border: none;
   border-radius: 0.6rem;
   padding: 0.7rem 1.4rem;
+  cursor: pointer;
 }
+
+.secondary-btn:hover {
+  filter: brightness(1.8);
+  transition: 0.5s;
+}
+
 
 .search-btn {
   position: absolute;
   left: 50%;
   bottom: -10%; 
   transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  filter: brightness(1.8);
+  transition: 0.5s;
 }

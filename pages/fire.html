@@ -5,16 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<meta name="description" content="Plongez dans l’univers de 4 Éléments Hôtel, où luxe et nature fusionnent dans des lieux uniques inspirés de la terre, l’eau, l’air et le feu. Une expérience immersive alliant aventure, innovation architecturale et exploration sensorielle, pour un voyage hors du commun.Rerservez dès maintentant dans l'un de nos hotels d'exception">
         <title>4 Éléments Hôtel – Luxe, Nature et Exploration aux Confins du Monde</title>
-				<link rel="stylesheet" href="font/font.css">
-				<link rel="stylesheet" href="/css/styles.css">
+				<link rel="stylesheet" href="../font/font.css">
+				<link rel="stylesheet" href="../css/styles.css">
     </head>
     <body>
 			<!-- Header & nav -------------------------------- -->
-			<header>
+			<header id="header">
 				<!-- Header mobile -->
 					<div class="header-mobile d-none">
-					<a href="#burger" action><img src="assets/images/icons/burger.png" alt=""></a>
-					<a href="#socials"><img src="assets/images/icons/socials-white.png" alt=""></a>
+					<a href="#burger" action><img src="../assets/images/icons/burger.png" alt=""></a>
+					<a href="#socials"><img src="../assets/images/icons/socials-white.png" alt=""></a>
 					</div>
 
 				<!-- Header-desktop -->
@@ -36,13 +36,13 @@
 							<a href="#Insta"><img src="../assets/images/icons/instagram.svg" alt="Instagram icon" class="instagram-icon"></a>
 							<a href="#Facebook"><img src="../assets/images/icons/facebook.svg" alt="Facebook icon" class="facebook-icon"></a>
 						</div>
-						<button class="secondary-btn">Reserver</button>
+						<button class="secondary-btn open-modal">Reserver</button>
 						<a href="#login">Se connecter</a>
 					</div>
 				</div>
 			</header>
 
-			<main>
+			<main id="main">
 				<section id="fireContent" class="container-fluid fire-page">
 					<div class="fire-hotel">
 						<div class="fire-hotel-content">
@@ -58,7 +58,7 @@
 							</div>
 							<div class="text">L'hôtel Feu ne se situe bien sûr pas sur un volcan, mais en Finlande. 
 								Feu de laterre volcanique crachant non loin de là ses geysers, feu des volcans à l'horizon et, bien entendu, feu des aurores boréales que vous pourrez admirer tous les soirs par le toit vitré de votre chambre.</div>
-							<a href="#heroForm"><button class="primary-btn">Reserver</button></a>
+							<a href="#heroForm"><button class="primary-btn open-modal">Reserver</button></a>
 						</div>
 						<div class="hotel-pics row-d">
 							<div class="first-pic">
@@ -86,8 +86,8 @@
 									<div class="gym"><img src="../assets/images/icons/barbell.svg" alt="">Salle de sport</div>
 									<div class="bus"><img src="../assets/images/icons/bus.svg" alt="">Transport aéroport</div>
 								</div>
-								<p class="price">à partir de<span>500€ / nuit</span></p>
-								<button class="primary-btn">Reserver</button>
+								<p class="price">à partir de <span>500€ / nuit</span></p>
+								<button class="primary-btn open-modal">Reserver</button>
 							</div>
 
 							<div class="suite">
@@ -102,8 +102,8 @@
 									<div class="gym"><img src="../assets/images/icons/barbell.svg" alt="">Salle de sport</div>
 									<div class="bus"><img src="../assets/images/icons/bus.svg" alt="">Transport aéroport</div>
 								</div>
-								<p class="price">à partir de<span>500€ / nuit</span></p>
-								<button class="primary-btn">Reserver</button>
+								<p class="price">à partir de <span>850€ / nuit</span></p>
+								<button class="primary-btn open-modal">Reserver</button>
 							</div>
 						</div>
 					</div>
@@ -147,22 +147,22 @@
 						<div class="snow-dog item">
 							<h4>Chien de traineaux</h4>
 							<p>Plongez dans une aventure hivernale palpitante en explorant la beauté des paysages enneigés lors d'une excursion magique.</p>
-							<button class="secondary-btn">Reserver</button>
+							<button class="secondary-btn open-modal">Reserver</button>
 						</div>
 						<div class="hiking item">
 							<h4>Rando en raquette</h4>
 							<p>Parcourez des sentiers immaculés et découvrez la tranquillité hivernale tout en profitant d'une randonnée en raquettes.</p>
-							<button class="secondary-btn">Reserver</button>
+							<button class="secondary-btn open-modal">Reserver</button>
 						</div>
 						<div class="volcano item">
 							<h4>Découvrir les volcans</h4>
 							<p>Explorez le monde fascinant des volcans, plongez au cœur de paysages spectaculaires et laissez-vous émerveiller.</p>
-							<button class="secondary-btn">Reserver</button>
+							<button class="secondary-btn open-modal">Reserver</button>
 						</div>
 						<div class="caves item">
 							<h4>Spéléologie</h4>
 							<p>Aventurez-vous dans les profondeurs mystérieuses de la terre lors d'une passionnante et extraordinaires  séance de spéléologie.</p>
-							<button class="secondary-btn">Reserver</button>
+							<button class="secondary-btn open-modal">Reserver</button>
 						</div>
 						<div class="car-btns">
 							<button id="prev" class="prev"><</button>
@@ -239,7 +239,7 @@
 						<p class="legend">Adresse :<span>8 avenue exemple</span></p>
 						<p class="legend">Ouverture :<span>Tous les jours de 9h à 20h30</span></p>
 						<p class="legend">Tél :<span>33 08 280 28002</span></p>
-						<a href="#heroForm" class="secondary-btn">Reserver en ligne</a>
+						<a href="#heroForm" class="secondary-btn open-modal">Reserver en ligne</a>
 					</div>
 					<div class="legals-col">
 						<p>Mentions légales</p>
@@ -249,6 +249,7 @@
 					</div>
 				</div>
 			</footer>
+			<div id="modalContainer"></div>
 		</body>
 		<script src="../script.js"></script>
 </html>

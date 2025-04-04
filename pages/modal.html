@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>4 elements hotels</title>
+				<link rel="stylesheet" href="font/font.css">
+				<link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+			<div id="modal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h2>Réservation</h2>
+					<form>
+						<fieldset>
+							<legend>Informations personnelles</legend>
+							<label for="lastName">Nom et prénom :</label>
+							<input type="text" id="lastName" name="lastName" placeholder="Nom" required>
+							<input type="text" id="firstName" name="firstName" placeholder="Prénom" required>
+							
+							<label for="address">Adresse postale :</label>
+							<input type="text" id="address" name="address" placeholder="Numéro et rue" required>
+							<input type="text" id="postal-code" name="postal-code" placeholder="Code postal" required>
+							<input type="text" id="city" name="city" placeholder="Ville" required>
+							
+							<label for="email">Email :</label>
+							<input type="email" id="email" name="email" required>
+							
+							<label for="phone">Téléphone :</label>
+							<input type="tel" id="phone" name="phone" required>
+						</fieldset>
+			
+						<fieldset>
+							<legend>Choix de l’hôtel et de la chambre</legend>
+								<div class="radio-group">
+									<label>
+										<input type="radio" name="room" value="igloo" required> Igloo - 500€/nuit
+									</label>
+									<label>
+										<input type="radio" name="room" value="suite" required> Suite Laponne - 850€/nuit
+									</label>
+								</div>
+								
+							
+							<label for="persons">Nombre de personnes :</label>
+							<select id="persons" name="persons">
+								<option value="1">1</option>
+								<option value="2">2</option>
+							</select>
+							
+							<label for="arrival">Date d’arrivée :</label>
+							<input type="date" id="arrival" name="arrival" required>
+							
+							<label for="departure">Date de départ :</label>
+							<input type="date" id="departure" name="departure" required>
+						</fieldset>
+			
+						<fieldset>
+							<legend>Options & Services</legend>
+								<div class="checkbox-group">
+									<label>
+										<input type="checkbox" name="chauffeur" value="yes"> Chauffeur (11€/jour)
+									</label>
+									
+									<label>
+										<input type="checkbox" id="breakfast" name="breakfast" value="yes"> Petit déjeuner (15€/pers./jour)
+									</label>
+									
+									<label>
+										<input type="checkbox" id="meal" name="meal" value="yes"> Repas (25€/pers./repas)
+									</label>
+									<label>
+										<input type="checkbox" name="visit" value="yes"> Visite guidée (20€)
+									</label>
+								</div>
+						</fieldset>
+							
+							<fieldset id="meal-options" style="display: none;">
+								<legend>Type de repas</legend>
+									<div class="checkbox-group">
+										<label><input type="checkbox" name="lunch" value="midi"> Midi</label>
+										<label><input type="checkbox" name="dinner" value="soir"> Soir</label>
+										<label><input type="checkbox" name="occasional" value="ponctuel"> Ponctuel (paiement sur place)</label>
+							</fieldset>
+			
+						<fieldset id="dietary-section" style="display: none;">
+							<legend>Régime alimentaire</legend>
+							<label><input type="radio" name="diet" value="vegan"> Végan</label>
+							<label><input type="radio" name="diet" value="vegetarian"> Végétarien</label>
+							<label><input type="radio" name="diet" value="none" checked> Aucun</label>
+			
+							<legend>Restrictions alimentaires</legend>
+							<label><input type="checkbox" name="gluten-free" value="yes"> Sans gluten</label>
+							<label><input type="checkbox" name="lactose-free" value="yes"> Sans lactose</label>
+							<label><input type="text" name="other-allergies" placeholder="Autres allergies"></label>
+						</fieldset>
+						
+						<button type="submit">Réserver</button>
+						<button class="close-modal">Fermer</button>
+					</form>
+				</div>
+			</div>			
+    </body>
+		<script src="../script.js"></script>
+</html>

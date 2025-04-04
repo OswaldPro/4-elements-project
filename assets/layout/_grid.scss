@@ -12,23 +12,44 @@
   gap: 24px 11px;
   grid-auto-flow: row;
   justify-items: flex-start;
+  align-items: center;
   grid-template-areas:
     "spa pool"
     "parking gym"
     "clim bus";
+
+  img {
+   object-fit: cover;
+   margin-right: 2rem;
+  }
 }
 
-.spa { grid-area: spa; }
+.spa { 
+grid-area: spa;
+display: flex;
+align-items:center
+}
 
-.parking { grid-area: parking; }
+.parking { 
+  grid-area: parking;
+  display: flex;
+  align-items:center }
 
-.clim { grid-area: clim; }
+.clim { grid-area: clim;
+  display: flex;
+  align-items:center }
 
-.pool { grid-area: pool; }
+.pool { grid-area: pool;
+  display: flex;
+  align-items:center }
 
-.gym { grid-area: gym; }
+.gym { grid-area: gym;
+  display: flex;
+  align-items:center }
 
-.bus { grid-area: bus; }
+.bus { grid-area: bus;
+  display: flex;
+  align-items:center }
 
 
 // Info grid 
