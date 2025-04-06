@@ -455,7 +455,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: none;
   overflow: auto;
 }
 .modal .modal-content {

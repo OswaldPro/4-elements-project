@@ -1,3 +1,32 @@
+if (window.location.href.includes('index.html')) {
+  // Sélectionne tous les carrousels
+  let hotelPics = document.querySelectorAll('.hotel-pics');
+  let nextBtns = document.querySelectorAll('.first-pic');
+  let prevBtns = document.querySelectorAll('.second-pic');
+
+  hotelPics.forEach((hotelPic, index) => {
+    let nextBtn = nextBtns[index]; // Associer le bon bouton au bon carrousel
+    let prevBtn = prevBtns[index];
+
+    nextBtn.onclick = function() {
+      hotelPic.append(hotelPic.querySelector('div:first-child'));
+    }
+
+    prevBtn.onclick = function() {
+      hotelPic.prepend(hotelPic.querySelector('div:last-child'));
+    }
+  });
+}
+
+
+
+
+
+
+
+
+
+
 // Script pour page feu
 
 if (window.location.href.includes('fire.html')) {
