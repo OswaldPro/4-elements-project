@@ -22,7 +22,13 @@ Ce projet est un examen blanc réalisé dans le cadre de la formation de dévelo
 ## Déploiement 🚀
 
 Le projet est consultable sur GitHub Pages :
-[LIEN_GITHUB_PAGES](https://ton-utilisateur.github.io/4-elements-projet/)
+https://OswaldPro.github.io/4-elements-projet
+
+## Améliorations
+
+- Ajout d'un carousel en home page sur le meme modèle que celui de la page fire.html
+- CSS pour rendre plus jolie les modals
+- Ajout d'animations pour les modals
 
 ## Auteurs ✍️
 
