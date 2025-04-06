@@ -10,9 +10,8 @@
     <body>
 			<div id="modal" class="modal">
 				<div class="modal-content">
-					<span class="close">&times;</span>
 					<h2>Réservation</h2>
-					<form>
+					<form id="form">
 						<fieldset>
 							<legend>Informations personnelles</legend>
 							<label for="lastName">Nom et prénom :</label>
@@ -60,47 +59,48 @@
 							<legend>Options & Services</legend>
 								<div class="checkbox-group">
 									<label>
-										<input type="checkbox" name="chauffeur" value="yes"> Chauffeur (11€/jour)
+										<input type="checkbox" id="chauffeur" name="chauffeur" value="oui"> Chauffeur (11€/jour)
 									</label>
 									
 									<label>
-										<input type="checkbox" id="breakfast" name="breakfast" value="yes"> Petit déjeuner (15€/pers./jour)
+										<input type="checkbox" id="breakfast" name="breakfast" value="oui"> Petit déjeuner (15€/pers./jour)
 									</label>
 									
 									<label>
-										<input type="checkbox" id="meal" name="meal" value="yes"> Repas (25€/pers./repas)
+										<input type="checkbox" id="meal" name="meal" value="oui"> Repas (15€/pers./repas)
 									</label>
 									<label>
-										<input type="checkbox" name="visit" value="yes"> Visite guidée (20€)
+										<input type="checkbox" id="visit" name="visit" value="oui"> Visite guidée (20€)
 									</label>
 								</div>
 						</fieldset>
 							
-							<fieldset id="meal-options" style="display: none;">
+							<fieldset id="mealOptions" style="display: none;">
 								<legend>Type de repas</legend>
 									<div class="checkbox-group">
-										<label><input type="checkbox" name="lunch" value="midi"> Midi</label>
-										<label><input type="checkbox" name="dinner" value="soir"> Soir</label>
-										<label><input type="checkbox" name="occasional" value="ponctuel"> Ponctuel (paiement sur place)</label>
+										<label><input type="checkbox"  name="lunch" id="lunch" value="midi"> Midi</label>
+										<label><input type="checkbox" name="dinner" id="dinner" value="soir"> Soir</label>
+										<label><input type="checkbox" name="occasional" id="occasional" value="ponctuel"> Occasionel (paiement sur place)</label>
 							</fieldset>
 			
-						<fieldset id="dietary-section" style="display: none;">
+						<fieldset id="dietOptions" style="display: none;">
 							<legend>Régime alimentaire</legend>
 							<label><input type="radio" name="diet" value="vegan"> Végan</label>
 							<label><input type="radio" name="diet" value="vegetarian"> Végétarien</label>
 							<label><input type="radio" name="diet" value="none" checked> Aucun</label>
 			
 							<legend>Restrictions alimentaires</legend>
-							<label><input type="checkbox" name="gluten-free" value="yes"> Sans gluten</label>
-							<label><input type="checkbox" name="lactose-free" value="yes"> Sans lactose</label>
+							<label><input type="checkbox" name="gluten-free" value="oui"> Sans gluten</label>
+							<label><input type="checkbox" name="lactose-free" value="oui"> Sans lactose</label>
 							<label><input type="text" name="other-allergies" placeholder="Autres allergies"></label>
 						</fieldset>
 						
 						<button type="submit">Réserver</button>
 						<button class="close-modal">Fermer</button>
 					</form>
+					<div id="recap" class="recap"></div>
 				</div>
-			</div>			
+			</div>	
+		<script src="../script.js"></script>		
     </body>
-		<script src="../script.js"></script>
 </html>
